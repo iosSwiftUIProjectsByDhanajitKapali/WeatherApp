@@ -11,7 +11,7 @@ struct MenuHeader: View {
     
     @ObservedObject var cityViewModel: CityViewModel
     
-    @State private var searchTerm = "Bogotá"
+    @State private var searchTerm = "Delhi"
     
     var body: some View {
         HStack {
