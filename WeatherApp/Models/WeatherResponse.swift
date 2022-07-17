@@ -7,12 +7,16 @@
 
 import Foundation
 
-struct WeatherResponse : Codable {
-    var current : Weather
-    var hourly : [Weather]
-    var daily : [DailyWeather]
+struct WeatherResponse: Codable {
+    var current: Weather
+    var hourly: [Weather]
+    var daily: [WeatherDaily]
     
     static func empty() -> WeatherResponse {
-        return WeatherResponse(current: Weather(), hourly: [Weather](repeating: Weather(), count: 23), daily: [DailyWeather](repeating: DailyWeather(), count: 8))
+        return WeatherResponse(
+            current: Weather(),
+            hourly: [Weather](repeating: Weather(), count: 24),
+            daily: [WeatherDaily](repeating: WeatherDaily(), count: 8)
+        )
     }
 }
